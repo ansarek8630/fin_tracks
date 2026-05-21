@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import '../widgets/monthly_transaction.dart';
+
+class HomePage extends ConsumerWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final cs = Theme.of(context);
+
+    return Scaffold(
+      backgroundColor: cs.colorScheme.surface,
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => context.push('/insights'),
+          icon: Icon(Icons.analytics_outlined, color: cs.colorScheme.secondary),
+          tooltip: "Analytics",
+        ),
+        title: Column(
+          children: [
+            Text(
+              "Fin Tracks",
+              style: cs.textTheme.titleLarge?.copyWith(
+                color: cs.colorScheme.secondary,
+              ),
+            ),
+            Text(
+              "Fin Tracks",
+              style: cs.textTheme.titleSmall?.copyWith(
+                color: cs.colorScheme.tertiary,
+                letterSpacing: 1.2,
+              ),
+            ),
+          ],
+        ),
+        centerTitle: true,
+        elevation: 0,
+        scrolledUnderElevation: 2,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.settings, color: cs.colorScheme.secondary),
+            onPressed: () => context.push('/settings'),
+          ),
+        ],
+      ),
+      body: const TransactionsGroupedByMonth(),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => context.push('/add'),
+        icon: const Icon(Icons.add),
+        label: Text("Add Transaction"),
+      ),
+    );
+  }
+}
