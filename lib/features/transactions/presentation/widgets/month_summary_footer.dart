@@ -1,5 +1,7 @@
+import 'package:fin_tracks/app/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
 import '../../../../core/utils/app_utils.dart';
 import '../controllers/budget_provider.dart';
 import '../controllers/monthly_expense_provider.dart';
@@ -48,17 +50,17 @@ class MonthSummaryFooter extends ConsumerWidget {
               return Column(
                 children: [
                   _SummaryRow(
-                    label: 'Budget:',
+                    label: '${context.loc.budget}:',
                     value: hasBudget ? fmtMoneyCompact(budget) : '-',
                   ),
                   const SizedBox(height: 4),
                   _SummaryRow(
-                    label: 'Spent:',
+                    label: '${context.loc.spent}:',
                     value: fmtMoneyCompact(expenseOnly),
                   ),
                   const SizedBox(height: 4),
                   _SummaryRow(
-                    label: 'Remaining:',
+                    label: '${context.loc.remaining}:',
                     value: remaining == null ? '-' : fmtMoneyCompact(remaining),
                     valueColor: remaining == null
                         ? null
@@ -71,16 +73,16 @@ class MonthSummaryFooter extends ConsumerWidget {
                     children: [
                       Text(
                         hasBudget
-                            ? "Budget Set"
-                            : "No Budget Set",
+                            ? context.loc.budgetSet
+                            : context.loc.noBudgetSet,
                         style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: cs.onSurfaceVariant,
                         ),
                       ),
                       IconButton(
                         tooltip: budget == null
-                            ? "Set Budget"
-                            : "Edit Budget",
+                            ? context.loc.setBudget
+                            : context.loc.editBudget,
                         icon: const Icon(Icons.edit_outlined),
                         onPressed: () =>
                             editBudgetDialog(context, ref, month, budget),

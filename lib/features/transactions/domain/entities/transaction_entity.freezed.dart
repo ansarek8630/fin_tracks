@@ -1,5 +1,5 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -9,278 +9,258 @@ part of 'transaction_entity.dart';
 // FreezedGenerator
 // **************************************************************************
 
-// dart format off
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
+
 /// @nodoc
 mixin _$TransactionEntity {
+  String get id => throw _privateConstructorUsedError;
+  double get amount => throw _privateConstructorUsedError;
+  String get category => throw _privateConstructorUsedError;
+  String? get note => throw _privateConstructorUsedError;
+  DateTime get date => throw _privateConstructorUsedError;
+  String? get receiptPath => throw _privateConstructorUsedError;
 
- String get id; double get amount; String get category; String? get note; DateTime get date; String? get receiptPath;
-/// Create a copy of TransactionEntity
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$TransactionEntityCopyWith<TransactionEntity> get copyWith => _$TransactionEntityCopyWithImpl<TransactionEntity>(this as TransactionEntity, _$identity);
-
-
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is TransactionEntity&&(identical(other.id, id) || other.id == id)&&(identical(other.amount, amount) || other.amount == amount)&&(identical(other.category, category) || other.category == category)&&(identical(other.note, note) || other.note == note)&&(identical(other.date, date) || other.date == date)&&(identical(other.receiptPath, receiptPath) || other.receiptPath == receiptPath));
-}
-
-
-@override
-int get hashCode => Object.hash(runtimeType,id,amount,category,note,date,receiptPath);
-
-@override
-String toString() {
-  return 'TransactionEntity(id: $id, amount: $amount, category: $category, note: $note, date: $date, receiptPath: $receiptPath)';
-}
-
-
+  /// Create a copy of TransactionEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $TransactionEntityCopyWith<TransactionEntity> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract mixin class $TransactionEntityCopyWith<$Res>  {
-  factory $TransactionEntityCopyWith(TransactionEntity value, $Res Function(TransactionEntity) _then) = _$TransactionEntityCopyWithImpl;
-@useResult
-$Res call({
- String id, double amount, String category, String? note, DateTime date, String? receiptPath
-});
-
-
-
-
+abstract class $TransactionEntityCopyWith<$Res> {
+  factory $TransactionEntityCopyWith(
+    TransactionEntity value,
+    $Res Function(TransactionEntity) then,
+  ) = _$TransactionEntityCopyWithImpl<$Res, TransactionEntity>;
+  @useResult
+  $Res call({
+    String id,
+    double amount,
+    String category,
+    String? note,
+    DateTime date,
+    String? receiptPath,
+  });
 }
+
 /// @nodoc
-class _$TransactionEntityCopyWithImpl<$Res>
+class _$TransactionEntityCopyWithImpl<$Res, $Val extends TransactionEntity>
     implements $TransactionEntityCopyWith<$Res> {
-  _$TransactionEntityCopyWithImpl(this._self, this._then);
+  _$TransactionEntityCopyWithImpl(this._value, this._then);
 
-  final TransactionEntity _self;
-  final $Res Function(TransactionEntity) _then;
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
-/// Create a copy of TransactionEntity
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? amount = null,Object? category = null,Object? note = freezed,Object? date = null,Object? receiptPath = freezed,}) {
-  return _then(_self.copyWith(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,amount: null == amount ? _self.amount : amount // ignore: cast_nullable_to_non_nullable
-as double,category: null == category ? _self.category : category // ignore: cast_nullable_to_non_nullable
-as String,note: freezed == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
-as String?,date: null == date ? _self.date : date // ignore: cast_nullable_to_non_nullable
-as DateTime,receiptPath: freezed == receiptPath ? _self.receiptPath : receiptPath // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
+  /// Create a copy of TransactionEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? amount = null,
+    Object? category = null,
+    Object? note = freezed,
+    Object? date = null,
+    Object? receiptPath = freezed,
+  }) {
+    return _then(
+      _value.copyWith(
+            id: null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                      as String,
+            amount: null == amount
+                ? _value.amount
+                : amount // ignore: cast_nullable_to_non_nullable
+                      as double,
+            category: null == category
+                ? _value.category
+                : category // ignore: cast_nullable_to_non_nullable
+                      as String,
+            note: freezed == note
+                ? _value.note
+                : note // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            date: null == date
+                ? _value.date
+                : date // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            receiptPath: freezed == receiptPath
+                ? _value.receiptPath
+                : receiptPath // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
+  }
 }
 
+/// @nodoc
+abstract class _$$TransactionEntityImplCopyWith<$Res>
+    implements $TransactionEntityCopyWith<$Res> {
+  factory _$$TransactionEntityImplCopyWith(
+    _$TransactionEntityImpl value,
+    $Res Function(_$TransactionEntityImpl) then,
+  ) = __$$TransactionEntityImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({
+    String id,
+    double amount,
+    String category,
+    String? note,
+    DateTime date,
+    String? receiptPath,
+  });
 }
 
+/// @nodoc
+class __$$TransactionEntityImplCopyWithImpl<$Res>
+    extends _$TransactionEntityCopyWithImpl<$Res, _$TransactionEntityImpl>
+    implements _$$TransactionEntityImplCopyWith<$Res> {
+  __$$TransactionEntityImplCopyWithImpl(
+    _$TransactionEntityImpl _value,
+    $Res Function(_$TransactionEntityImpl) _then,
+  ) : super(_value, _then);
 
-/// Adds pattern-matching-related methods to [TransactionEntity].
-extension TransactionEntityPatterns on TransactionEntity {
-/// A variant of `map` that fallback to returning `orElse`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _TransactionEntity value)?  $default,{required TResult orElse(),}){
-final _that = this;
-switch (_that) {
-case _TransactionEntity() when $default != null:
-return $default(_that);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// Callbacks receives the raw object, upcasted.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case final Subclass2 value:
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _TransactionEntity value)  $default,){
-final _that = this;
-switch (_that) {
-case _TransactionEntity():
-return $default(_that);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `map` that fallback to returning `null`.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case final Subclass value:
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _TransactionEntity value)?  $default,){
-final _that = this;
-switch (_that) {
-case _TransactionEntity() when $default != null:
-return $default(_that);case _:
-  return null;
-
-}
-}
-/// A variant of `when` that fallback to an `orElse` callback.
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return orElse();
-/// }
-/// ```
-
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  double amount,  String category,  String? note,  DateTime date,  String? receiptPath)?  $default,{required TResult orElse(),}) {final _that = this;
-switch (_that) {
-case _TransactionEntity() when $default != null:
-return $default(_that.id,_that.amount,_that.category,_that.note,_that.date,_that.receiptPath);case _:
-  return orElse();
-
-}
-}
-/// A `switch`-like method, using callbacks.
-///
-/// As opposed to `map`, this offers destructuring.
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case Subclass2(:final field2):
-///     return ...;
-/// }
-/// ```
-
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  double amount,  String category,  String? note,  DateTime date,  String? receiptPath)  $default,) {final _that = this;
-switch (_that) {
-case _TransactionEntity():
-return $default(_that.id,_that.amount,_that.category,_that.note,_that.date,_that.receiptPath);case _:
-  throw StateError('Unexpected subclass');
-
-}
-}
-/// A variant of `when` that fallback to returning `null`
-///
-/// It is equivalent to doing:
-/// ```dart
-/// switch (sealedClass) {
-///   case Subclass(:final field):
-///     return ...;
-///   case _:
-///     return null;
-/// }
-/// ```
-
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  double amount,  String category,  String? note,  DateTime date,  String? receiptPath)?  $default,) {final _that = this;
-switch (_that) {
-case _TransactionEntity() when $default != null:
-return $default(_that.id,_that.amount,_that.category,_that.note,_that.date,_that.receiptPath);case _:
-  return null;
-
-}
-}
-
+  /// Create a copy of TransactionEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? amount = null,
+    Object? category = null,
+    Object? note = freezed,
+    Object? date = null,
+    Object? receiptPath = freezed,
+  }) {
+    return _then(
+      _$TransactionEntityImpl(
+        id: null == id
+            ? _value.id
+            : id // ignore: cast_nullable_to_non_nullable
+                  as String,
+        amount: null == amount
+            ? _value.amount
+            : amount // ignore: cast_nullable_to_non_nullable
+                  as double,
+        category: null == category
+            ? _value.category
+            : category // ignore: cast_nullable_to_non_nullable
+                  as String,
+        note: freezed == note
+            ? _value.note
+            : note // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        date: null == date
+            ? _value.date
+            : date // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        receiptPath: freezed == receiptPath
+            ? _value.receiptPath
+            : receiptPath // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
+  }
 }
 
 /// @nodoc
 
+class _$TransactionEntityImpl implements _TransactionEntity {
+  const _$TransactionEntityImpl({
+    required this.id,
+    required this.amount,
+    required this.category,
+    this.note,
+    required this.date,
+    this.receiptPath,
+  });
 
-class _TransactionEntity implements TransactionEntity {
-  const _TransactionEntity({required this.id, required this.amount, required this.category, this.note, required this.date, this.receiptPath});
-  
+  @override
+  final String id;
+  @override
+  final double amount;
+  @override
+  final String category;
+  @override
+  final String? note;
+  @override
+  final DateTime date;
+  @override
+  final String? receiptPath;
 
-@override final  String id;
-@override final  double amount;
-@override final  String category;
-@override final  String? note;
-@override final  DateTime date;
-@override final  String? receiptPath;
+  @override
+  String toString() {
+    return 'TransactionEntity(id: $id, amount: $amount, category: $category, note: $note, date: $date, receiptPath: $receiptPath)';
+  }
 
-/// Create a copy of TransactionEntity
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$TransactionEntityCopyWith<_TransactionEntity> get copyWith => __$TransactionEntityCopyWithImpl<_TransactionEntity>(this, _$identity);
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TransactionEntityImpl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.category, category) ||
+                other.category == category) &&
+            (identical(other.note, note) || other.note == note) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.receiptPath, receiptPath) ||
+                other.receiptPath == receiptPath));
+  }
 
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, id, amount, category, note, date, receiptPath);
 
-
-@override
-bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _TransactionEntity&&(identical(other.id, id) || other.id == id)&&(identical(other.amount, amount) || other.amount == amount)&&(identical(other.category, category) || other.category == category)&&(identical(other.note, note) || other.note == note)&&(identical(other.date, date) || other.date == date)&&(identical(other.receiptPath, receiptPath) || other.receiptPath == receiptPath));
+  /// Create a copy of TransactionEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TransactionEntityImplCopyWith<_$TransactionEntityImpl> get copyWith =>
+      __$$TransactionEntityImplCopyWithImpl<_$TransactionEntityImpl>(
+        this,
+        _$identity,
+      );
 }
 
+abstract class _TransactionEntity implements TransactionEntity {
+  const factory _TransactionEntity({
+    required final String id,
+    required final double amount,
+    required final String category,
+    final String? note,
+    required final DateTime date,
+    final String? receiptPath,
+  }) = _$TransactionEntityImpl;
 
-@override
-int get hashCode => Object.hash(runtimeType,id,amount,category,note,date,receiptPath);
+  @override
+  String get id;
+  @override
+  double get amount;
+  @override
+  String get category;
+  @override
+  String? get note;
+  @override
+  DateTime get date;
+  @override
+  String? get receiptPath;
 
-@override
-String toString() {
-  return 'TransactionEntity(id: $id, amount: $amount, category: $category, note: $note, date: $date, receiptPath: $receiptPath)';
+  /// Create a copy of TransactionEntity
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TransactionEntityImplCopyWith<_$TransactionEntityImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
-
-
-}
-
-/// @nodoc
-abstract mixin class _$TransactionEntityCopyWith<$Res> implements $TransactionEntityCopyWith<$Res> {
-  factory _$TransactionEntityCopyWith(_TransactionEntity value, $Res Function(_TransactionEntity) _then) = __$TransactionEntityCopyWithImpl;
-@override @useResult
-$Res call({
- String id, double amount, String category, String? note, DateTime date, String? receiptPath
-});
-
-
-
-
-}
-/// @nodoc
-class __$TransactionEntityCopyWithImpl<$Res>
-    implements _$TransactionEntityCopyWith<$Res> {
-  __$TransactionEntityCopyWithImpl(this._self, this._then);
-
-  final _TransactionEntity _self;
-  final $Res Function(_TransactionEntity) _then;
-
-/// Create a copy of TransactionEntity
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? amount = null,Object? category = null,Object? note = freezed,Object? date = null,Object? receiptPath = freezed,}) {
-  return _then(_TransactionEntity(
-id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
-as String,amount: null == amount ? _self.amount : amount // ignore: cast_nullable_to_non_nullable
-as double,category: null == category ? _self.category : category // ignore: cast_nullable_to_non_nullable
-as String,note: freezed == note ? _self.note : note // ignore: cast_nullable_to_non_nullable
-as String?,date: null == date ? _self.date : date // ignore: cast_nullable_to_non_nullable
-as DateTime,receiptPath: freezed == receiptPath ? _self.receiptPath : receiptPath // ignore: cast_nullable_to_non_nullable
-as String?,
-  ));
-}
-
-
-}
-
-// dart format on

@@ -12,6 +12,4 @@ abstract class TransactionEntity with _$TransactionEntity {
     required DateTime date,
     String? receiptPath,
   }) = _TransactionEntity;
-
-
 }

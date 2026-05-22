@@ -1,3 +1,4 @@
+import 'package:fin_tracks/app/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 
 class EmptyTransactionsState extends StatelessWidget {
@@ -19,14 +20,14 @@ class EmptyTransactionsState extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              "No transactions found",
+              context.loc.noTransactions,
               style: Theme.of(
                 context,
               ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 6),
             Text(
-              "Add your first transaction to get started",
+              context.loc.addFirstTransaction,
               textAlign: TextAlign.center,
               style: Theme.of(
                 context,

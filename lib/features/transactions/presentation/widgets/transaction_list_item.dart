@@ -1,3 +1,4 @@
+import 'package:fin_tracks/app/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -91,7 +92,7 @@ class TransactionListItem extends ConsumerWidget {
               ),
             ),
             IconButton(
-              tooltip: "Delete",
+              tooltip: context.loc.delete,
               splashRadius: 20,
               icon: Icon(Icons.delete_outline, color: cs.secondary),
               onPressed: () =>
@@ -107,7 +108,7 @@ class TransactionListItem extends ConsumerWidget {
     Clipboard.setData(ClipboardData(text: note));
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(SnackBar(content: Text("Note copied to clipboard")));
+    ).showSnackBar(SnackBar(content: Text(context.loc.copiedToClipboard)));
   }
 }
 
@@ -144,7 +145,7 @@ Future<void> _showNoteSheet(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Note", // localize "Note"
+              ctx.loc.note, // localize "Note"
               style: Theme.of(
                 ctx,
               ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
@@ -163,7 +164,7 @@ Future<void> _showNoteSheet(
                     await _editNoteDialog(context, ref, t);
                   },
                   icon: const Icon(Icons.edit_outlined),
-                  label: Text("Edit"),
+                  label: Text(ctx.loc.edit),
                 ),
                 const SizedBox(width: 8),
                 if ((t.note?.isNotEmpty ?? false))
@@ -176,12 +177,12 @@ Future<void> _showNoteSheet(
                       Navigator.of(ctx).pop();
                     },
                     icon: const Icon(Icons.delete_outline),
-                    label: Text("Clear"),
+                    label: Text(ctx.loc.clear),
                   ),
                 const Spacer(),
                 TextButton(
                   onPressed: () => Navigator.of(ctx).pop(),
-                  child: Text("Close"),
+                  child: Text(ctx.loc.close),
                 ),
               ],
             ),
@@ -202,23 +203,23 @@ Future<void> _editNoteDialog(
     context: context,
     builder: (ctx) {
       return AlertDialog(
-        title: Text("Edit Note"),
+        title: Text(ctx.loc.editNote),
         content: TextField(
           controller: controller,
           autofocus: true,
           maxLines: 5,
           textInputAction: TextInputAction.done,
-          decoration: InputDecoration(hintText: "Type your note"),
+          decoration: InputDecoration(hintText: ctx.loc.typeYourNote),
           onSubmitted: (_) => Navigator.of(ctx).pop(true),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(false),
-            child: Text("Cancel"),
+            child: Text(ctx.loc.cancel),
           ),
           FilledButton(
             onPressed: () => Navigator.of(ctx).pop(true),
-            child: Text("Save"),
+            child: Text(ctx.loc.save),
           ),
         ],
       );

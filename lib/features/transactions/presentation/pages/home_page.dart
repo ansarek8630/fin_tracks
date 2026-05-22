@@ -50,7 +50,7 @@ class HomePage extends ConsumerWidget {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.push('/add'),
         icon: const Icon(Icons.add),
-        label: Text(context.loc.addTransactionTitle),
+        label: Text(context.loc.addButton),
       ),
     );
   }

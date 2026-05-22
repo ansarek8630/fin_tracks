@@ -1,3 +1,4 @@
+import 'package:fin_tracks/app/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -21,8 +22,8 @@ String friendlyDate(DateTime d, BuildContext context) {
   final now = DateTime.now();
   final today = DateTime(now.year, now.month, now.day);
   final date = DateTime(d.year, d.month, d.day);
-  if (date == today) return "Today";
-  if (date == today.subtract(const Duration(days: 1))) return "Yesterday";
+  if (date == today) return context.loc.todayLabel;
+  if (date == today.subtract(const Duration(days: 1))) return context.loc.yesterdayLabel;
   return _longDate.format(d);
 }
 

@@ -1,12 +1,12 @@
 import 'dart:ui' show lerpDouble;
 
-import 'package:fin_tracks/features/transactions/presentation/controllers/transaction_providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import '../../domain/entities/transaction_entity.dart';
+import '../controllers/transaction_providers.dart';
 import '../formatters/formatters.dart';
 import 'empty_transactions_state.dart';
 import 'month_daily_chart_exact.dart';
@@ -306,7 +306,7 @@ class _AnimatedMonthBody extends StatelessWidget {
         children: [
           const SizedBox(height: 8),
           // NEW: Daily chart for the month
-          Padding(
+        Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: MonthDailyChartExact(
               month: month,
