@@ -55,3 +55,32 @@ Future<void> editBudgetDialog(
     },
   );
 }
+
+Future<void> deleteDialog(
+  BuildContext context,
+  String title,
+  final VoidCallback onDelete,
+) async {
+  await showDialog(
+    context: context,
+    builder: (ctx) {
+      return AlertDialog(
+        content: Text(title),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text('Cancel'),
+          ),
+          FilledButton.icon(
+            onPressed: () async {
+              onDelete();
+              if (context.mounted) Navigator.of(ctx).pop();
+            },
+            icon: Icon(Icons.delete),
+            label: Text('Delete'),
+          ),
+        ],
+      );
+    },
+  );
+}

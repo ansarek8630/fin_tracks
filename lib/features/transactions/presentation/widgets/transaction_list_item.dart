@@ -1,4 +1,5 @@
 import 'package:fin_tracks/app/extension/context_extension.dart';
+import 'package:fin_tracks/core/utils/app_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -95,8 +96,13 @@ class TransactionListItem extends ConsumerWidget {
               tooltip: context.loc.delete,
               splashRadius: 20,
               icon: Icon(Icons.delete_outline, color: cs.secondary),
-              onPressed: () =>
-                  ref.read(transactionControllerProvider.notifier).delete(t.id),
+              onPressed: () => deleteDialog(
+                context,
+                'Are you sure you want to delete this transaction?',
+                () => ref
+                    .read(transactionControllerProvider.notifier)
+                    .delete(t.id),
+              ),
             ),
           ],
         ),
