@@ -1,3 +1,4 @@
+import 'package:fin_tracks/app/extension/context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -16,18 +17,18 @@ class HomePage extends ConsumerWidget {
         leading: IconButton(
           onPressed: () => context.push('/insights'),
           icon: Icon(Icons.analytics_outlined, color: cs.colorScheme.secondary),
-          tooltip: "Analytics",
+          tooltip: context.loc.analytics,
         ),
         title: Column(
           children: [
             Text(
-              "Fin Tracks",
+              context.loc.appTitle,
               style: cs.textTheme.titleLarge?.copyWith(
                 color: cs.colorScheme.secondary,
               ),
             ),
             Text(
-              "Fin Tracks",
+              context.loc.byNavas,
               style: cs.textTheme.titleSmall?.copyWith(
                 color: cs.colorScheme.tertiary,
                 letterSpacing: 1.2,
@@ -49,7 +50,7 @@ class HomePage extends ConsumerWidget {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.push('/add'),
         icon: const Icon(Icons.add),
-        label: Text("Add Transaction"),
+        label: Text(context.loc.addTransactionTitle),
       ),
     );
   }
